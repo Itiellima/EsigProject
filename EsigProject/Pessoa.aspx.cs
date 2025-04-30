@@ -13,18 +13,7 @@ namespace EsigProject
     {
         string conexao = ConfigurationManager.ConnectionStrings["ConexaoSQL"].ConnectionString;
 
-
-        // Carrega os dados da tabela
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                CarregarPessoas();
-            }
-        }
-
         // Busca os dados de Pessoas no banco e mostra no gridPessoas
-        // Atualiza a tabela
         private void CarregarPessoas()
         {
             using (SqlConnection conn = new SqlConnection(conexao))
@@ -36,6 +25,17 @@ namespace EsigProject
                 gridPessoas.DataBind();
             }
         }
+
+        // Carrega os dados da tabela
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                CarregarPessoas();
+            }
+        }
+
+
 
 
         // Salva ou atualiza uma Pessoa

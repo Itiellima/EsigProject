@@ -22,11 +22,6 @@
             <asp:Label ID="lblId" runat="server" Visible="false" />
 
             <div class="form-group">
-                <label for="txtID">ID</label>
-                <asp:TextBox ID="txtID" runat="server" CssClass="form-control" ReadOnly/>
-            </div>
-
-            <div class="form-group">
 
                 <asp:Label ID="lblNome" runat="server" Text="Nome:" />
                 <asp:TextBox ID="txtNome" runat="server" CssClass="form-control" />
