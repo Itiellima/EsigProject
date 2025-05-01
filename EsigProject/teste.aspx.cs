@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
+using System.Collections.Generic;
 using System.Configuration;
-using System.EnterpriseServices;
-using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
 using System.Web;
-
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace EsigProject
 {
@@ -85,11 +86,6 @@ namespace EsigProject
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
-
-                // Chama a procedure para atualizar a tabela pessoa_salario
-                SqlCommand cmdProc = new SqlCommand("calcular_salarios", conn);
-                cmdProc.CommandType = CommandType.StoredProcedure;
-                cmdProc.ExecuteNonQuery();
             }
 
             LimparCampos();
@@ -173,6 +169,4 @@ namespace EsigProject
         }
 
     }
-
-
 }
