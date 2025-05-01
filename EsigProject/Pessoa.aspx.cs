@@ -55,9 +55,9 @@ namespace EsigProject
                     conn.Close();
 
                     cmd.CommandText = @"INSERT INTO pessoa 
-            (id, nome, cidade, email, cep, enderco, pais, usuario, telefone, data_nascimento, cargo_id) 
-            VALUES 
-            (@id, @nome, @cidade, @email, @cep, @enderco, @pais, @usuario, @telefone, @data_nascimento, @cargo_id)";
+                (id, nome, cidade, email, cep, enderco, pais, usuario, telefone, data_nascimento, cargo_id) 
+                VALUES 
+                (@id, @nome, @cidade, @email, @cep, @enderco, @pais, @usuario, @telefone, @data_nascimento, @cargo_id)";
 
                     cmd.Parameters.AddWithValue("@id", novoId);
                 }
@@ -81,7 +81,7 @@ namespace EsigProject
                 cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                 cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
                 cmd.Parameters.AddWithValue("@data_nascimento", DateTime.Parse(txtDataNascimento.Text));
-                cmd.Parameters.AddWithValue("@cargo_id", float.Parse(txtCargoId.Text));
+                cmd.Parameters.AddWithValue("@cargo_id", float.Parse(ddlCargo.SelectedValue));
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -122,7 +122,7 @@ namespace EsigProject
                         if (reader["data_nascimento"] != DBNull.Value)
                             txtDataNascimento.Text = Convert.ToDateTime(reader["data_nascimento"]).ToString("yyyy-MM-dd");
 
-                        txtCargoId.Text = reader["cargo_id"].ToString();
+                        ddlCargo.Text = reader["cargo_id"].ToString();
                     }
                 }
             }
@@ -146,7 +146,7 @@ namespace EsigProject
         {
             lblId.Text = "";
             txtNome.Text = "";
-            txtCargoId.Text = "";
+            ddlCargo.Text = "";
             txtCidade.Text = "";
             txtEmail.Text = "";
             txtCep.Text = "";

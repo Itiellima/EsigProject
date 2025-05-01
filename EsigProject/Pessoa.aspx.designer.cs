@@ -150,31 +150,22 @@ namespace EsigProject
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDataNascimento;
 
         /// <summary>
-        /// Controle lblCargoId.
+        /// Controle ddlCargo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCargoId;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCargo;
 
         /// <summary>
-        /// Controle txtCargoId.
+        /// Controle rfvCargo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCargoId;
-
-        /// <summary>
-        /// Controle rfvCargoId.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCargoId;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCargo;
 
         /// <summary>
         /// Controle btnSalvar.

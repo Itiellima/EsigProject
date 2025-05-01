@@ -78,11 +78,20 @@
             </div>
 
             <div class="form-group">
-                <asp:Label ID="lblCargoId" runat="server" Text="Cargo ID:" />
-                <asp:TextBox ID="txtCargoId" runat="server" CssClass="form-control" />
-                <asp:RequiredFieldValidator ID="rfvCargoId" runat="server"
-                    ControlToValidate="txtCargoId"
-                    ErrorMessage="* Campo obrigatório"
+                <label for="Cargo">Cargo</label>
+                <asp:DropDownList ID="ddlCargo" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Selecione o Cargo" Value="" />
+                    <asp:ListItem Text="Estagiário" Value="1" />
+                    <asp:ListItem Text="Técnico" Value="2" />
+                    <asp:ListItem Text="Analista" Value="3" />
+                    <asp:ListItem Text="Coordenador" Value="4" />
+                    <asp:ListItem Text="Gerente" Value="5" />
+                </asp:DropDownList>
+
+                <asp:RequiredFieldValidator ID="rfvCargo" runat="server"
+                    ControlToValidate="ddlCargo"
+                    InitialValue=""
+                    ErrorMessage="* Selecione um cargo"
                     ForeColor="Red"
                     Display="Dynamic" />
             </div>
