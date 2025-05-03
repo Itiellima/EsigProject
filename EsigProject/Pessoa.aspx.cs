@@ -55,19 +55,19 @@ namespace EsigProject
                     conn.Close();
 
                     cmd.CommandText = @"INSERT INTO pessoa 
-                (id, nome, cidade, email, cep, enderco, pais, usuario, telefone, data_nascimento, cargo_id) 
-                VALUES 
-                (@id, @nome, @cidade, @email, @cep, @enderco, @pais, @usuario, @telefone, @data_nascimento, @cargo_id)";
+                                        (id, nome, cidade, email, cep, enderco, pais, usuario, telefone, data_nascimento, cargo_id) 
+                                        VALUES 
+                                        (@id, @nome, @cidade, @email, @cep, @enderco, @pais, @usuario, @telefone, @data_nascimento, @cargo_id)";
 
                     cmd.Parameters.AddWithValue("@id", novoId);
                 }
                 else // Atualizar
                 {
                     cmd.CommandText = @"UPDATE pessoa SET 
-                nome=@nome, cidade=@cidade, email=@email, cep=@cep, enderco=@enderco,
-                pais=@pais, usuario=@usuario, telefone=@telefone, data_nascimento=@data_nascimento,
-                cargo_id=@cargo_id 
-                WHERE id=@id";
+                                        nome=@nome, cidade=@cidade, email=@email, cep=@cep, enderco=@enderco,
+                                        pais=@pais, usuario=@usuario, telefone=@telefone, data_nascimento=@data_nascimento,
+                                        cargo_id=@cargo_id 
+                                        WHERE id=@id";
 
                     cmd.Parameters.AddWithValue("@id", float.Parse(lblId.Text));
                 }
