@@ -27,6 +27,7 @@ Sistema web desenvolvido em ASP.NET Web Forms com banco de dados SQL Server para
 - Abra com o Visual Studio
 - Configure a string de conexão no Web.config
 - Execute as scripts SQL para criar as tabelas e procedures
+- Se preferir, use o arquivo `backup.bak` e restaure no SQL Server Management Studio.
 - Pressione F5 para rodar o projeto
 ## Observações
 - O campo ID da tabela pessoa é float para compatibilidade com importações
