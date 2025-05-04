@@ -35,12 +35,13 @@
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Página Inicial</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Pessoa">Cadastro Pessoa</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/PessoaSalario">Listagem dos salários</a></li>
 
 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Pessoa">Cadastro Pessoa</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/PessoaSalario">Listagem dos salários</a></li>
+
                     </ul>
                 </div>
 
