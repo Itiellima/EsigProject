@@ -19,6 +19,7 @@
     </asp:GridView>
 
     <asp:Button ID="btnRecalcular" runat="server" CssClass="btn btn-primary" Text="Recalcular Salários" OnClick="btnRecalcular_Click" />
+    </p></p></p></p>.
 
 
 
